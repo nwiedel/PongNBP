@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public float speed = 30f;
+    public AudioSource audioSource;
     public AudioClip ballHitPaddle;
     public AudioClip ballHitWall;
     public AudioClip ballMiss;
@@ -33,7 +34,7 @@ public class Ball : MonoBehaviour
             // Richtungsvector auf die Physik anwenden
             GetComponent<Rigidbody2D>().velocity = dir * speed;
             // Audio
-
+            audioSource.PlayOneShot(ballHitPaddle);
         }
         if (collision.gameObject.name == "Spieler2")
         {
@@ -45,7 +46,7 @@ public class Ball : MonoBehaviour
             // Richtungsvector auf die Physik anwenden
             GetComponent<Rigidbody2D>().velocity = dir * speed;
             // Audio
-            ballHitPaddle.Play();
+            audioSource.PlayOneShot(ballHitPaddle);
         }
     }
 
