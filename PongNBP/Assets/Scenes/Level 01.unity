@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 1324617967}
   m_Layer: 0
   m_Name: WandHorizontaloben
-  m_TagString: Untagged
+  m_TagString: WallTopBottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 1458867867}
   m_Layer: 0
   m_Name: WandVertikalLinks
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 1477899775}
   m_Layer: 0
   m_Name: WandHorizontalUnten
-  m_TagString: Untagged
+  m_TagString: WallTopBottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 1637698441}
   m_Layer: 0
   m_Name: WandVertikalRechts
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

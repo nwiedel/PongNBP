@@ -48,6 +48,14 @@ public class Ball : MonoBehaviour
             // Audio
             audioSource.PlayOneShot(ballHitPaddle);
         }
+        if (collision.gameObject.CompareTag("WallTopBottom"))
+        {
+            audioSource.PlayOneShot(ballHitWall);
+        }
+        if (collision.gameObject.CompareTag("Goal"))
+        {
+            audioSource.PlayOneShot(ballMiss);
+        }
     }
 
     private float HitObject(Vector2 ballPos, Vector2 schlaegerPos, float schlaegerHoehe)
