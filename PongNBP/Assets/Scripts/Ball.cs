@@ -5,6 +5,10 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public float speed = 30f;
+
+    int scoreSpieler1;
+    int scoreSpieler2;
+
     public AudioSource audioSource;
     public AudioClip ballHitPaddle;
     public AudioClip ballHitWall;
@@ -52,10 +56,17 @@ public class Ball : MonoBehaviour
         {
             audioSource.PlayOneShot(ballHitWall);
         }
-        if (collision.gameObject.CompareTag("Goal"))
+        if (collision.gameObject.name == "WandVertikalLinks")
         {
             audioSource.PlayOneShot(ballMiss);
+            scoreSpieler1++;
         }
+        if (collision.gameObject.name == "WandVertikalRechts")
+        {
+            audioSource.PlayOneShot(ballMiss);
+            scoreSpieler2++;
+        }
+        Debug.Log(scoreSpieler1 + " : " + scoreSpieler2);
     }
 
     private float HitObject(Vector2 ballPos, Vector2 schlaegerPos, float schlaegerHoehe)
